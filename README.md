@@ -1,6 +1,3 @@
-
-raw
-Boote website · HTML
 <!DOCTYPE html>
 <html lang="de" data-theme="light">
 <head>
