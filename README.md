@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html/>
 <html lang="de" data-theme="light">
 <head>
 <meta charset="UTF-8">
