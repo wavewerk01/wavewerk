@@ -1,14 +1,14 @@
-<html/>
+<!DOCTYPE html>
 <html lang="de" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WaveWerk – Bootsrestaurierung</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
- 
+
 [data-theme="light"]{
   --bg:#faf9f7;
   --bg2:#f3f1ed;
@@ -51,15 +51,15 @@ html{scroll-behavior:smooth}
   --shadow-h:0 4px 16px rgba(0,0,0,0.4),0 16px 48px rgba(0,0,0,0.35);
   --lux-accent:#f0ece4;
 }
- 
+
 body{
   font-family:'Inter',sans-serif;
   background:var(--bg);color:var(--text);
   overflow-x:hidden;
   transition:background .35s,color .35s;
   -webkit-font-smoothing:antialiased;
-}
- 
+  font-size:17px;
+
 /* ── LUXURY ORNAMENT LINE ── */
 .orn{
   display:flex;align-items:center;gap:1rem;
@@ -71,7 +71,7 @@ body{
   transform:rotate(45deg);flex-shrink:0;
 }
 .orn-sm .orn-line{max-width:40px}
- 
+
 /* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
@@ -93,14 +93,14 @@ nav{
 }
 .nav-c{display:flex;align-items:center;gap:2.2rem}
 .nav-c a{
-  font-size:.68rem;font-weight:500;letter-spacing:.16em;
+  font-size:.78rem;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);
   text-decoration:none;transition:color .2s;
 }
 .nav-c a:hover,.nav-c a.on{color:var(--heading)}
 .nav-c a.nav-gold{color:var(--gold)}
 .nav-c a.nav-gold:hover{color:var(--gold2)}
- 
+
 /* theme pill */
 .tpill{
   position:relative;width:46px;height:24px;
@@ -117,23 +117,23 @@ nav{
   font-size:.6rem;line-height:1;
 }
 [data-theme="dark"] .tknob{transform:translateX(22px)}
- 
+
 /* hamburger */
 .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .ham span{display:block;width:22px;height:1.5px;background:var(--text);transition:all .25s}
 .ham.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
 .ham.open span:nth-child(2){opacity:0}
 .ham.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
- 
+
 /* mobile overlay */
 .mob{display:none;position:fixed;inset:0;z-index:199;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
 .mob.open{display:flex}
 .mob a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--heading);text-decoration:none;letter-spacing:.04em}
 .mob a:hover{color:var(--gold)}
- 
+
 /* pages */
 .pg{display:none}.pg.on{display:block}
- 
+
 /* ── HERO ── */
 .hero{
   min-height:100vh;
@@ -143,17 +143,17 @@ nav{
   max-width:1240px;margin:0 auto;
 }
 .hero-text{padding:5rem 0}
- 
+
 .hero-kicker{
   display:flex;align-items:center;gap:.8rem;
   margin-bottom:2rem;
 }
 .hero-kicker-line{width:32px;height:1px;background:var(--gold)}
 .hero-kicker span{
-  font-size:.65rem;font-weight:600;letter-spacing:.24em;
+  font-size:.78rem;font-weight:700;letter-spacing:.2em;
   text-transform:uppercase;color:var(--gold);
 }
- 
+
 .hero h1{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(3rem,5.5vw,5rem);
@@ -162,19 +162,19 @@ nav{
   margin-bottom:1.6rem;
 }
 .hero h1 em{font-style:italic;font-weight:400;color:var(--gold)}
- 
+
 .hero-p{
-  font-size:.95rem;color:var(--muted);
+  font-size:1.05rem;color:var(--muted);
   line-height:1.8;max-width:400px;margin-bottom:2.6rem;
 }
- 
+
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
- 
+
 .btn-lux{
-  font-family:'Inter',sans-serif;font-size:.68rem;
-  font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  font-family:'Inter',sans-serif;font-size:.78rem;
+  font-weight:700;letter-spacing:.15em;text-transform:uppercase;
   text-decoration:none;display:inline-flex;align-items:center;gap:.6rem;
-  padding:.9rem 2rem;cursor:pointer;border:none;
+  padding:.95rem 2rem;cursor:pointer;border:none;
   transition:all .25s;
 }
 .btn-lux-fill{background:var(--heading);color:var(--bg)}
@@ -183,7 +183,7 @@ nav{
 .btn-lux-line:hover{border-color:var(--gold);color:var(--gold)}
 .btn-arrow{font-size:.8rem;transition:transform .2s}
 .btn-lux:hover .btn-arrow{transform:translateX(3px)}
- 
+
 .hero-divider{
   display:flex;align-items:center;gap:1.5rem;
   margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);
@@ -194,11 +194,11 @@ nav{
   font-size:2.2rem;font-weight:600;color:var(--heading);line-height:1;
 }
 .hstat-l{
-  font-size:.6rem;font-weight:500;letter-spacing:.18em;
+  font-size:.72rem;font-weight:600;letter-spacing:.15em;
   text-transform:uppercase;color:var(--muted);margin-top:.4rem;
 }
 .hero-divider-sep{width:1px;height:40px;background:var(--border);flex-shrink:0}
- 
+
 /* hero visual */
 .hero-visual{
   position:relative;width:100%;aspect-ratio:4/3;
@@ -232,30 +232,30 @@ nav{
   padding:.28rem .75rem;
   background:var(--wip-bg);border:1px solid var(--wip-bd);color:var(--wip-c);
 }
- 
+
 /* ── SECTION BASE ── */
 .wrap{max-width:1240px;margin:0 auto}
 .sec{padding:7rem 3rem}
 .sec-alt{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
- 
+
 .s-eyebrow{
   display:flex;align-items:center;gap:.75rem;margin-bottom:1.4rem;
 }
 .s-eyebrow-line{width:28px;height:1px;background:var(--gold)}
 .s-eyebrow span{
-  font-size:.62rem;font-weight:600;letter-spacing:.22em;
+  font-size:.75rem;font-weight:700;letter-spacing:.2em;
   text-transform:uppercase;color:var(--gold);
 }
 .s-h{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2rem,4vw,3rem);font-weight:600;
+  font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;
   color:var(--heading);line-height:1.12;letter-spacing:-.01em;
 }
 .s-sub{
-  font-size:.9rem;color:var(--muted);
+  font-size:1rem;color:var(--muted);
   line-height:1.8;max-width:480px;margin-top:.9rem;
 }
- 
+
 /* ── HOW WE WORK ── */
 .how-row{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -273,11 +273,11 @@ nav{
   line-height:1;margin-bottom:1.4rem;
 }
 .how-t{
-  font-size:.7rem;font-weight:600;letter-spacing:.16em;
+  font-size:.8rem;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--heading);margin-bottom:.7rem;
 }
-.how-d{font-size:.84rem;color:var(--muted);line-height:1.8}
- 
+.how-d{font-size:.93rem;color:var(--muted);line-height:1.8}
+
 /* ── BOAT CARD ── */
 .boat-wrap{margin-top:4rem}
 .boat-lux{
@@ -312,22 +312,22 @@ nav{
 }
 .btag-wip{background:var(--wip-bg);color:var(--wip-c);border:1px solid var(--wip-bd)}
 .btag-done{background:var(--done-bg);color:var(--done-c);border:1px solid var(--done-bd)}
- 
+
 .boat-body{
   padding:3rem;display:flex;flex-direction:column;
   border-left:1px solid var(--border);
 }
 .boat-eyebrow{
-  font-size:.6rem;font-weight:600;letter-spacing:.2em;
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);margin-bottom:.7rem;
 }
 .boat-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:2.2rem;font-weight:600;color:var(--heading);
+  font-size:2.5rem;font-weight:700;color:var(--heading);
   line-height:1.12;letter-spacing:-.01em;margin-bottom:1.2rem;
 }
-.boat-desc{font-size:.88rem;color:var(--muted);line-height:1.85;margin-bottom:2rem}
- 
+.boat-desc{font-size:.96rem;color:var(--muted);line-height:1.85;margin-bottom:2rem}
+
 /* progress */
 .prog-wrap{margin-bottom:2rem}
 .prog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.7rem}
@@ -335,15 +335,15 @@ nav{
 .prog-head span:last-child{font-size:.78rem;font-weight:600;color:var(--wip-c)}
 .prog-track{height:2px;background:var(--border);overflow:hidden}
 .prog-fill{height:100%;width:35%;background:linear-gradient(90deg,var(--gold),var(--gold2))}
- 
+
 .boat-specs{
   display:grid;grid-template-columns:repeat(4,1fr);
   gap:1.4rem;margin-top:auto;padding-top:2rem;border-top:1px solid var(--border);
 }
-.spec-l{font-size:.56rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
-.spec-v{font-size:.92rem;font-weight:600;color:var(--heading)}
+.spec-l{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.spec-v{font-size:1rem;font-weight:700;color:var(--heading)}
 .spec-v.wip{color:var(--wip-c)}
- 
+
 /* ── SOCIALS BAR ── */
 .soc-bar{
   padding:2.8rem 3rem;border-top:1px solid var(--border);
@@ -355,7 +355,7 @@ nav{
   font-family:'Cormorant Garamond',serif;
   font-size:1.3rem;font-weight:600;color:var(--heading);margin-bottom:.2rem;letter-spacing:.02em;
 }
-.soc-l p{font-size:.82rem;color:var(--muted)}
+.soc-l p{font-size:.92rem;color:var(--muted)}
 .soc-links{display:flex;gap:.6rem;flex-wrap:wrap}
 .soc-a{
   display:flex;align-items:center;gap:.55rem;
@@ -363,11 +363,11 @@ nav{
   text-decoration:none;background:var(--bg);transition:all .22s;
 }
 .soc-a:hover{border-color:var(--gold-line);background:var(--gold-bg)}
-.soc-a span{font-size:.7rem;font-weight:600;letter-spacing:.08em;color:var(--text);transition:color .2s}
+.soc-a span{font-size:.8rem;font-weight:600;letter-spacing:.08em;color:var(--text);transition:color .2s}
 .soc-a:hover span{color:var(--gold)}
 .soc-a svg{flex-shrink:0;transition:opacity .2s}
 .soc-a:hover svg{opacity:.7}
- 
+
 /* ── CTA ── */
 .cta-outer{
   background:var(--heading);
@@ -383,18 +383,18 @@ nav{
   font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;
   color:var(--bg);margin-bottom:.4rem;
 }
-.cta-in p{font-size:.88rem;color:rgba(250,249,247,.45)}
+.cta-in p{font-size:1rem;color:rgba(250,249,247,.45)}
 [data-theme="dark"] .cta-in p{color:rgba(17,16,9,.45)}
 .btn-cta{
-  font-family:'Inter',sans-serif;font-size:.68rem;
-  font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  font-family:'Inter',sans-serif;font-size:.78rem;
+  font-weight:700;letter-spacing:.15em;text-transform:uppercase;
   padding:.95rem 2.2rem;background:var(--bg);color:var(--heading);
   text-decoration:none;flex-shrink:0;
   border:none;cursor:pointer;transition:opacity .2s;
   display:inline-block;
 }
 .btn-cta:hover{opacity:.8}
- 
+
 /* ── FOOTER ── */
 .foot-outer{border-top:1px solid var(--border)}
 .foot-in{
@@ -409,10 +409,10 @@ nav{
 }
 .foot-logo-d{width:5px;height:5px;background:var(--gold);transform:rotate(45deg)}
 .foot-nav{display:flex;gap:2rem}
-.foot-nav a{font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.foot-nav a{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .foot-nav a:hover{color:var(--heading)}
-.foot-copy{font-size:.62rem;color:var(--muted);opacity:.6}
- 
+.foot-copy{font-size:.72rem;color:var(--muted);opacity:.6}
+
 /* ── ABOUT PAGE ── */
 .about-top{
   padding:calc(64px + 5.5rem) 3rem 5.5rem;
@@ -426,8 +426,8 @@ nav{
   max-width:720px;margin-top:1.2rem;
 }
 .about-top h1 em{font-style:italic;font-weight:400;color:var(--gold)}
-.about-top p{font-size:.95rem;color:var(--muted);max-width:480px;line-height:1.8;margin-top:1.6rem}
- 
+.about-top p{font-size:1.05rem;color:var(--muted);max-width:480px;line-height:1.8;margin-top:1.6rem}
+
 /* team */
 .team-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem}
 .t-card{
@@ -451,20 +451,20 @@ nav{
 }
 .t-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;font-weight:600;color:var(--heading);margin-bottom:.25rem;
+  font-size:1.7rem;font-weight:700;color:var(--heading);margin-bottom:.25rem;
 }
 .t-role{
-  font-size:.6rem;font-weight:600;letter-spacing:.2em;
+  font-size:.7rem;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;
 }
-.t-bio{font-size:.86rem;color:var(--muted);line-height:1.82}
+.t-bio{font-size:.94rem;color:var(--muted);line-height:1.82}
 .t-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.4rem}
 .t-tag{
-  font-size:.6rem;font-weight:500;padding:.28rem .75rem;
+  font-size:.7rem;font-weight:600;padding:.3rem .8rem;
   border:1px solid var(--border);color:var(--muted);background:var(--bg);
   letter-spacing:.04em;
 }
- 
+
 /* story */
 .story-cols{display:grid;grid-template-columns:1fr 1.6fr;gap:6rem;align-items:center}
 .story-q{
@@ -485,18 +485,18 @@ nav{
   font-size:2rem;font-weight:600;color:var(--heading);
   margin-bottom:1.4rem;letter-spacing:-.01em;
 }
-.story-r p{font-size:.88rem;color:var(--muted);line-height:1.88;margin-bottom:1rem}
- 
+.story-r p{font-size:.96rem;color:var(--muted);line-height:1.88;margin-bottom:1rem}
+
 /* values */
 .val-cols{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3.5rem;border:1px solid var(--border)}
 .val-item{padding:2.2rem 2rem;border-right:1px solid var(--border)}
 .val-item:last-child{border-right:none}
 .val-t{
-  font-size:.62rem;font-weight:600;letter-spacing:.2em;
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;
 }
-.val-d{font-size:.86rem;color:var(--muted);line-height:1.82}
- 
+.val-d{font-size:.94rem;color:var(--muted);line-height:1.82}
+
 /* contact */
 .contact-cols{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .contact-cols h2{
@@ -504,17 +504,17 @@ nav{
   font-size:2.2rem;font-weight:600;color:var(--heading);
   margin-bottom:.9rem;letter-spacing:-.01em;
 }
-.contact-cols>div>p{font-size:.88rem;color:var(--muted);line-height:1.82;margin-bottom:2rem}
+.contact-cols>div>p{font-size:.96rem;color:var(--muted);line-height:1.82;margin-bottom:2rem}
 .c-list{display:flex;flex-direction:column}
 .c-row{
   display:flex;justify-content:space-between;align-items:center;
   padding:1.1rem 0;border-bottom:1px solid var(--border);gap:1rem;
 }
 .c-row:first-child{border-top:1px solid var(--border)}
-.c-label{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.c-val{font-size:.86rem;font-weight:500;color:var(--text)}
+.c-label{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.c-val{font-size:.94rem;font-weight:600;color:var(--text)}
 .c-val.pending{color:var(--muted);font-style:italic;font-weight:400}
- 
+
 /* ── MOBILE ── */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;gap:2rem;padding-top:84px}
@@ -557,7 +557,7 @@ nav{
 </style>
 </head>
 <body>
- 
+
 <!-- MOBILE OVERLAY -->
 <div class="mob" id="mob">
   <a href="#" onclick="P('home');CM();return false">Start</a>
@@ -565,7 +565,7 @@ nav{
   <a href="#" onclick="P('home');CM();S('projekte');return false">Projekte</a>
   <a href="#" onclick="P('about');CM();S('kontakt');return false" style="color:var(--gold)">Kontakt</a>
 </div>
- 
+
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#" onclick="P('home');return false">
@@ -584,11 +584,11 @@ nav{
     </button>
   </div>
 </nav>
- 
- 
+
+
 <!-- ══════════════ START ══════════════ -->
 <div id="pg-home" class="pg on">
- 
+
 <div class="hero">
   <div class="hero-text">
     <div class="hero-kicker">
@@ -621,7 +621,7 @@ nav{
     </div>
   </div>
 </div>
- 
+
 <!-- HOW -->
 <div class="sec-alt">
   <div class="sec wrap">
@@ -651,7 +651,7 @@ nav{
     </div>
   </div>
 </div>
- 
+
 <!-- BOOT -->
 <div class="sec wrap" id="projekte">
   <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>Aktuelles Projekt</span></div>
@@ -688,7 +688,7 @@ nav{
     </div>
   </div>
 </div>
- 
+
 <!-- SOCIALS -->
 <div class="soc-bar">
   <div class="soc-l">
@@ -706,7 +706,7 @@ nav{
     </a>
   </div>
 </div>
- 
+
 <!-- CTA -->
 <div class="cta-outer">
   <div class="cta-in">
@@ -717,7 +717,7 @@ nav{
     <a class="btn-cta" href="#" onclick="P('about');S('kontakt');return false">Kontakt aufnehmen</a>
   </div>
 </div>
- 
+
 <div class="foot-outer">
   <div class="foot-in">
     <div class="foot-logo">WaveWerk <div class="foot-logo-d"></div></div>
@@ -729,24 +729,24 @@ nav{
     <div class="foot-copy">© 2030 WaveWerk</div>
   </div>
 </div>
- 
+
 </div><!-- /home -->
- 
- 
+
+
 <!-- ══════════════ ÜBER UNS ══════════════ -->
 <div id="pg-about" class="pg">
- 
+
 <div class="about-top">
   <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>Über uns</span></div>
   <h1>Zwei Freunde.<br><em>Eine Leidenschaft.</em></h1>
   <p>Wir restaurieren Boote, weil wir es lieben. Gestartet mit 15 Jahren, angetrieben von einer verrückten Idee – das ist heute WaveWerk.</p>
 </div>
- 
+
 <div class="sec wrap">
   <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>Das Team</span></div>
   <h2 class="s-h">Die Macher</h2>
   <div class="team-row">
- 
+
     <div class="t-card">
       <div class="t-init">F</div>
       <p class="t-name">Finn</p>
@@ -760,7 +760,7 @@ nav{
         <span class="t-tag">Beschaffung</span>
       </div>
     </div>
- 
+
     <div class="t-card">
       <div class="t-init">B</div>
       <p class="t-name">Bastian</p>
@@ -774,10 +774,10 @@ nav{
         <span class="t-tag">Zubehör</span>
       </div>
     </div>
- 
+
   </div>
 </div>
- 
+
 <div class="sec-alt">
   <div class="sec wrap">
     <div class="story-cols">
@@ -794,7 +794,7 @@ nav{
     </div>
   </div>
 </div>
- 
+
 <div class="sec wrap">
   <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>Was uns antreibt</span></div>
   <h2 class="s-h">Unsere Werte</h2>
@@ -804,7 +804,7 @@ nav{
     <div class="val-item"><p class="val-t">Leidenschaft</p><p class="val-d">Wir tun das, weil wir es lieben. Das merkt man jedem Boot an, das unsere Werkstatt verlässt.</p></div>
   </div>
 </div>
- 
+
 <div class="sec-alt" id="kontakt">
   <div class="sec wrap">
     <div class="contact-cols">
@@ -824,7 +824,7 @@ nav{
     </div>
   </div>
 </div>
- 
+
 <div class="foot-outer">
   <div class="foot-in">
     <div class="foot-logo">WaveWerk <div class="foot-logo-d"></div></div>
@@ -836,9 +836,9 @@ nav{
     <div class="foot-copy">© 2030 WaveWerk</div>
   </div>
 </div>
- 
+
 </div><!-- /about -->
- 
+
 <script>
 var dark=false;
 function TT(){
